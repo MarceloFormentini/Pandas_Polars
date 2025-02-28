@@ -1,4 +1,5 @@
 # Comparação entre Pandas X Polars
+Comandos para utilizar o ambiente virtual, instalar libs necessárias e gerar o arquivo requirements.txt.
 ```
 python3 -m venv venv
 . venv\Scripts\activate
@@ -10,7 +11,7 @@ pip3 freeze > requirements.txt
 
 📌 Passos do Projeto
 - Gerar um conjunto de dados grande, com 1 milhão de registros.
-- Executar operações e comparar desempenho usando time/timeit.
+- Executar operações e comparar desempenho usando time.time().
 - Funcionalidades para Comparação
   - Escrita de CSV
   - Leitura de CSV
@@ -23,10 +24,8 @@ pip3 freeze > requirements.txt
   - Escrita de dados
 
 📌 Explicação
-Criamos um dataset grande com 1 milhão de linhas.
-Salvamos como CSV para simular um cenário real.
-Carregamos os dados e executamos um filtro + agregação.
-Medimos o tempo de execução com time.time().
+
+É gerado um dataset grande, com 1 milhão de linhas, na sequência executa algumas operações, cada operação é medido o tempo de execução com time.time().
 
 📈 O que será comparado?
 | Operação       | Pandas                | Polars                      |
